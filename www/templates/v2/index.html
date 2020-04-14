@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <style>
+        .main {
+            height: 100%
+        }
+        .main-left{
+            width: 300px;
+            height: 100%;
+            float: left;
+        }
+        .main-right{
+            margin-left: 300px;
+            height: 100%;
+            background-color: #eaeaea;
+        }
+        .none {
+            display: none;
+        }
+        .block {
+            display: block;
+        }
+        .frame {
+            height: 100%;
+            width: 100%;
+            border: none;
+        }
+        .hover-opacity:hover {
+            opacity: 0.5;
+        }
+        .cursor-pointer {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<script src="/static/js/vue.min.js"></script>
+<script src="/static/js/jquery.min.js"></script>
+<body style="height: 100%; margin: 0px;">
+<div class="main">
+    <div class="main-left">
+        <div style="height: 19%; background-color: #4d4d4d"></div>
+        <div style="height: 10%; position: relative; margin-top: -50px; margin-left: 100px;">
+            <img src="/static/images/pic-1001.jpg" style="height: 100px; border-radius: 50%;">
+        </div>
+        <div style="text-align: center">
+            <p class="hover-opacity cursor-pointer" style="font-family: fantasy; margin-top: 55px">Mr.miss</p>
+            <p style="margin-top: 55px; color: #999">言念君子，温其如玉</p>
+            <div style="margin-top: 70px; color: #999">
+                <p class="hover-opacity cursor-pointer">主页</p>
+                <p class="hover-opacity cursor-pointer">相册</p>
+                <p class="hover-opacity cursor-pointer">关于</p>
+            </div>
+        </div>
+    </div>
+    <div class="main-right">
+        <iframe class="frame" src="/article" ></iframe>
+        <iframe class="frame none" src="/photo"></iframe>
+    </div>
+</div>
+</body>
+</html>

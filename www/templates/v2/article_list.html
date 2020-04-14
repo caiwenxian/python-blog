@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 99%;">
+<head>
+    <meta charset="UTF-8">
+    <title>文章列表</title>
+    <link rel="stylesheet" href="/static/css/v2/common.css">
+</head>
+<body id="vm" style="padding: 30px; ">
+<div class="article-list" style="background-color: white; height: 100%;">
+    <div class="inner-header">
+        <div style="padding: 30px">
+            <span style="font-size: 24px; color: #656363;">文章标题one</span>
+            <span style="float: right; margin-right: 20px; color: #999">2015-01-09</span>
+
+        </div>
+    </div>
+    <div class="inner-body" style="padding: 30px">
+        <h3>西行</h3>
+        <br>
+        <p>
+            每个春天，候鸟都会来到这片花田。
+            每个不是春天的季节，花匠总在认真地打理花田。花匠想让一切看起来未来可期，因为他喜欢这只候鸟。喜欢，是因为他们都爱花。那些关于花的话题，他们永远聊不完。
+        </p>
+        <p>
+            有一个春天，候鸟跟花匠说起了她家乡的雪莲。
+            这种花，花匠从来没听说过。但每次说起雪莲，花匠都能注意到她眼中飞扬的光亮。是的，那是候鸟最心爱的花儿。
+        </p>
+        <div>
+            <span class="cursor-pointer hover-opacity" style="margin-top: 30px;">more>></span>
+            <hr style="margin-top: 30px;">
+            <br>
+            <span class="cursor-pointer hover-opacity" style="">叙事</span>
+            <span class="cursor-pointer hover-opacity" style="float: right;">展开全文>></span>
+        </div>
+    </div>
+    <div class="inner-footer">
+
+    </div>
+</div>
+
+<div class="article-list" style="background-color: white; height: 100%;">
+    <div class="inner-header">
+        <div style="padding: 30px">
+            <span style="font-size: 24px; color: #656363;">文章标题one</span>
+            <span style="float: right; margin-right: 20px; color: #999">2015-01-09</span>
+
+        </div>
+    </div>
+    <div class="inner-body" style="padding: 30px">
+        <h3>西行</h3>
+        <br>
+        <p>
+            每个春天，候鸟都会来到这片花田。
+            每个不是春天的季节，花匠总在认真地打理花田。花匠想让一切看起来未来可期，因为他喜欢这只候鸟。喜欢，是因为他们都爱花。那些关于花的话题，他们永远聊不完。
+        </p>
+        <p>
+            有一个春天，候鸟跟花匠说起了她家乡的雪莲。
+            这种花，花匠从来没听说过。但每次说起雪莲，花匠都能注意到她眼中飞扬的光亮。是的，那是候鸟最心爱的花儿。
+        </p>
+        <div>
+            <span class="cursor-pointer hover-opacity" style="margin-top: 30px;">more>></span>
+            <hr style="margin-top: 30px;">
+            <br>
+            <span class="cursor-pointer hover-opacity" style="">叙事</span>
+            <span class="cursor-pointer hover-opacity" style="float: right;">展开全文>></span>
+        </div>
+    </div>
+    <div class="inner-footer">
+
+    </div>
+</div>
+
+<div class="article-list" style="background-color: white; height: 100%;" v-if="article != null">
+    <div class="inner-header">
+        <div style="padding: 30px">
+            <span style="font-size: 24px; color: #656363;">文章标题one</span>
+            <span style="float: right; margin-right: 20px; color: #999">2015-01-09</span>
+
+        </div>
+    </div>
+    <div class="inner-body" style="padding: 30px">
+        <h3>西行{{article.title}}</h3>
+        <br>
+        <p>
+            每个春天，候鸟都会来到这片花田。
+            每个不是春天的季节，花匠总在认真地打理花田。花匠想让一切看起来未来可期，因为他喜欢这只候鸟。喜欢，是因为他们都爱花。那些关于花的话题，他们永远聊不完。
+        </p>
+        <p>
+            有一个春天，候鸟跟花匠说起了她家乡的雪莲。
+            这种花，花匠从来没听说过。但每次说起雪莲，花匠都能注意到她眼中飞扬的光亮。是的，那是候鸟最心爱的花儿。
+        </p>
+        <div>
+            <span class="cursor-pointer hover-opacity" style="margin-top: 30px;">more>></span>
+            <hr style="margin-top: 30px;">
+            <br>
+            <span class="cursor-pointer hover-opacity" style="">叙事</span>
+            <span class="cursor-pointer hover-opacity" style="float: right;">展开全文>></span>
+        </div>
+    </div>
+    <div class="inner-footer">
+
+    </div>
+</div>
+<div v-component="pagination" v-with="page"></div>
+</body>
+<script src="/static/js/vue.min.js"></script>
+<script src="/static/js/jquery.min.js"></script>
+<script>
+    $(function () {
+        // initVM()
+    })
+    var article = {};
+    setTimeout(function () {
+        article.vm = new Vue({
+            el: '#vm',
+            data: {
+                page: 1,
+                articles: [],
+                article: {
+                    title: '西行记'
+                }
+            }
+        });
+    }, 1000)
+
+</script>
+</html>
